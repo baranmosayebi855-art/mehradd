@@ -1,0 +1,91 @@
+body {  margin: 0;
+  height: 100vh;
+  background: #0b0b0b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+}
+
+.envelope {
+  width: 220px;
+  height: 140px;
+  background: #111;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.flap {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+  border-bottom: 80px solid #1a1a1a;
+  top: -80px;
+  transform-origin: bottom;
+  transition: 1s;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  background: #0b0b0b;
+  border-radius: 8px;
+}
+
+.letter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(40px);
+  width: 260px;
+  background: white;
+  padding: 20px;
+  opacity: 0;
+  transition: 1s;
+  border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #222;
+  white-space: pre-line;
+}
+
+#mute {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.hearts {
+  position: absolute;
+  animation: float 3s linear forwards;
+}
+
+@keyframes float {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-200px); opacity: 0; }
+}
+
+.open .flap {
+  transform: rotateX(180deg);
+}
+
+.open .letter {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-120px);
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scene">
+  <div class="envelope" id="envelope">
+    <div class="flap"></div>
+    <div class="body"></div>
+  </div>
+
+  <div class="letter" id="letter">
+    <div class="text">
+      مهراد عزیزم ♡  
+      تمام تلاشمو کردم یه کاری انجام بدم خوشحال بشی و همین از دستم برمیومد 🫠 امیدوارم خوشت بیاد ازش. اینو بدون من خیلی خیلی حس آرامش دارم کنار تو و اینو خیلی مدیونتم چون منو از یه سیاهی بزرگ نجات دادی. یادت نره من همیشه کنارتم که باهم بهترینارو تجربه کنیم و بدون که من خیلی زیاد بهت ایمان دارم میدونم از پس همه چی برمیای و به همه آرزو های خوشگلت میرسی خیلی زود کل دنیارو میبینی همونطوری که همیشه دوست داشتی :) xx  
+      <br><br>
+      Barwiix 🤍
+    </div>
+  </div>
+
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
+  <button id="mute">🔊</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

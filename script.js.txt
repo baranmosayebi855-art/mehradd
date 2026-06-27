@@ -1,0 +1,31 @@
+const envelope = document.getElementById("envelope");const music = document.getElementById("music");
+const muteBtn = document.getElementById("mute");
+
+let opened = false;
+
+envelope.addEventListener("click", () => {
+  if (!opened) {
+    document.querySelector(".scene").classList.add("open");
+    music.play().catch(()=>{});
+    spawnHearts();
+    opened = true;
+  }
+});
+
+muteBtn.addEventListener("click", () => {
+  music.muted = !music.muted;
+  muteBtn.textContent = music.muted ? "🔇" : "🔊";
+});
+
+function spawnHearts() {
+  for (let i = 0; i < 15; i++) {
+    const heart = document.createElement("div");
+    heart.className = "hearts";
+    heart.innerHTML = "🤍";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.top = "80vh";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 3000);
+  }
+}
